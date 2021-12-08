@@ -7,7 +7,7 @@
 <h1> Welcome to my guessing game</h1>
 
 <?php
-$correctnumber=26; //change this number //
+$correctnumber = 28; //change this number //
 if(isset($_GET['guess']))
 {
   if (is_numeric($_GET['guess'])===FALSE)
