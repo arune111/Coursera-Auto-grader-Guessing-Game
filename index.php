@@ -3,7 +3,7 @@
 <head lang="uz-UZB">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Anvar Narzulloev 41884c79 </title>
+<title> Anvar Narzulloev 85b648a8 </title>
 <h1> Welcome to my guessing game</h1>
 
 <?php
