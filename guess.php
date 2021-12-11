@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head lang="uz-UZB">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Anvar Narzulloev 85b648a8 </title>
-<h1> Welcome to my guessing game</h1>
-
-<?php
-$correctnumber = 28; //change this number //
-if(isset($_GET['guess']))
-{
-  if (is_numeric($_GET['guess'])===FALSE)
- {
-echo "Your guess is not a number";
-}
-else if ($_GET['guess']<$correctnumber)
- {
-echo "Your guess is too low";
-}
-else if ($_GET['guess']>$correctnumber)
- {
-echo "Your guess is too high";
-}
-else if ($_GET['guess']==$correctnumber)
- {
-echo "Congratulations - You are right";
-}
-}
-else
-{
-echo "Missing guess parameter <br> Your guess is too short";
-}
-?>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guessing Game for Anvar Narzulloev f1723518</title>
+</head>
+<body>
+	<h1>Welcome to guessing game</h1>
+	<p>
+		<?php 
+		if (!isset($_GET['guess'])) {
+			echo("Missing guess parameter");
+		} elseif (strlen($_GET['guess']) < 1) {
+			echo("Your guess is too short");
+		} elseif (!is_numeric($_GET['guess'])) {
+			echo("Your guess is not a number");
+		} elseif ($_GET['guess'] < 34) {
+			echo('Your guess is too low');
+		} elseif ($_GET['guess'] > 34) {
+			echo("Your guess is too high");
+		}
+		else {
+			echo("Congratulations - You are right");
+		}
+		?>
+	</p>
 </body>
 </html>
